@@ -1,4 +1,12 @@
-## Feature http-client documentation
+# gRPC Cats API
+Cats API with gRPC
 
-- [Micronaut Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+## Build
+To build this project run the following
 
+`./mvnw clean install`
+
+## Run
+To run the project run
+
+`./mvnw mn:run`
