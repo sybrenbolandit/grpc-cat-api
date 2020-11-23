@@ -40,6 +40,12 @@
 
   <dependencies>
     <dependency>
+      <groupId>nl.sybrenbolandit.proto</groupId>
+      <artifactId>proto-specifications</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-inject</artifactId>
       <scope>compile</scope>
@@ -166,35 +172,6 @@
             <argument>${exec.mainClass}</argument>
           </arguments>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.github.os72</groupId>
-        <artifactId>protoc-jar-maven-plugin</artifactId>
-        <version>3.6.0.2</version>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <configuration>
-              <addProtoSources>all</addProtoSources>
-              <includeMavenTypes>direct</includeMavenTypes>
-              <inputDirectories>
-                <include>src/main/proto</include>
-              </inputDirectories>
-              <outputTargets>
-                <outputTarget>
-                  <type>java</type>
-                </outputTarget>
-                <outputTarget>
-                  <type>grpc-java</type>
-                  <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.17.1</pluginArtifact>
-                </outputTarget>
-              </outputTargets>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
