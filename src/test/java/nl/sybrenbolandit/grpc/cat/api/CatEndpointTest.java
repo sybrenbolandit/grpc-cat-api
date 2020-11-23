@@ -23,7 +23,7 @@ public class CatEndpointTest {
             @Override
             public void onNext(Cat cat) {
                 assertEquals("Freddy", cat.getName());
-                assertEquals(4, cat.getAge());
+                assertEquals(5, cat.getAge());
             }
 
             @Override
