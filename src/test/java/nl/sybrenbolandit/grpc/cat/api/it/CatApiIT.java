@@ -17,7 +17,7 @@ public class CatApiIT {
     CatServiceGrpc.CatServiceBlockingStub blockingStub;
 
     @Test
-    void testHelloWorld() {
+    void testGetCat() {
         final CatRequest request = CatRequest.newBuilder()
                 .setChipId("92821-1231")
                 .build();
