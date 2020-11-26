@@ -3,6 +3,8 @@ package nl.sybrenbolandit.grpc.cat.api;
 import io.grpc.stub.StreamObserver;
 import io.micronaut.test.annotation.MockBean;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
+import nl.sybrenbolandit.grpc.cat.api.data.CatRepository;
+import nl.sybrenbolandit.grpc.cat.api.data.DummyCatRepository;
 import nl.sybrenbolandit.proto.Cat;
 import nl.sybrenbolandit.proto.CatRequest;
 import org.junit.jupiter.api.Test;
@@ -54,6 +56,6 @@ public class CatEndpointTest {
 
     @MockBean(CatRepository.class)
     CatRepository mathService() {
-        return mock(CatRepository.class);
+        return mock(DummyCatRepository.class);
     }
 }
