@@ -9,10 +9,10 @@ import javax.inject.Singleton;
 @Singleton
 public class ServerBuilderListener implements BeanCreatedEventListener<ServerBuilder<?>> {
 
-    @Override
-    public ServerBuilder<?> onCreated(BeanCreatedEvent<ServerBuilder<?>> event) {
-        final ServerBuilder<?> builder = event.getBean();
-        builder.addService(ProtoReflectionService.newInstance());
-        return builder;
-    }
+  @Override
+  public ServerBuilder<?> onCreated(BeanCreatedEvent<ServerBuilder<?>> event) {
+    final ServerBuilder<?> builder = event.getBean();
+    builder.addService(ProtoReflectionService.newInstance());
+    return builder;
+  }
 }

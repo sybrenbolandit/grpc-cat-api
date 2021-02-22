@@ -9,11 +9,9 @@ import nl.sybrenbolandit.proto.CatServiceGrpc;
 
 @Factory
 class Clients {
-    @Bean
-    CatServiceGrpc.CatServiceBlockingStub blockingStub(
-            @GrpcChannel(GrpcServerChannel.NAME) ManagedChannel channel) {
-        return CatServiceGrpc.newBlockingStub(
-                channel
-        );
-    }
+  @Bean
+  CatServiceGrpc.CatServiceBlockingStub blockingStub(
+      @GrpcChannel(GrpcServerChannel.NAME) ManagedChannel channel) {
+    return CatServiceGrpc.newBlockingStub(channel);
+  }
 }
